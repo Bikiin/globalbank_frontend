@@ -4,6 +4,6 @@ export const isValidInput = (input: Element | RadioNodeList | null) =>{
 
 export const isValidName = (name: string) => {
     const regex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
-    if(!name || !regex.test(name)) return false
+    if(!name || !regex.test(name) || !name.trim()) return false
     return true
 }
